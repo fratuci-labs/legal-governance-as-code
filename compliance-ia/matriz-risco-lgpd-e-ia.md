@@ -25,7 +25,7 @@ Este Relatório de Impacto à Proteção de Dados Pessoais (RIPD) e Matriz de Ri
 | Sistema / Agente | Vertical | Classificação de Risco | Dados Pessoais Sensíveis? | Medida Jurídica & Técnica Obrigatória |
 | :--- | :--- | :---: | :---: | :--- |
 | **Agente de Triagem Farmacológica (`PHARMA-TRIAGE-001`)** | HealthTech | **ALTO RISCO** | **Não** (Opera sobre princípios ativos DCB/DCI anonimizados) | Proibição estrita de prescrição médica; RAG restrito à base curada da Adriana; supervisão humana obrigatória (*Human-in-the-Loop*) em alertas de severidade `ALTA`. |
-| **Ponte Gemini-to-GitHub (`gemini-webhook-ingest`)** | Plataforma Interna | **BAIXO RISCO** | **Não** (Apenas documentos corporativos dos sócios) | Assinatura HMAC-SHA256, restrição de organização `fratuci-labs` e revisão via Pull Request. |
+| **Ponte Gemini-to-GitHub (`gemini-webhook-ingest`)** | Plataforma Interna | **BAIXO RISCO** | **Não** (Apenas documentos corporativos dos sócios) | Assinatura HMAC-SHA256 obrigatória (fail-closed), restrição de organização `fratuci-labs` e revisão via Pull Request. |
 | **Motor de Anomalias Logísticas (`LOGTECH-PREDICT`)** | LogTech | **RISCO MODERADO** | **Minimizado** (Telemetria de carga e cadeia fria) | Pseudonimização de identificadores de motoristas; retenção controlada por TTL no ClickHouse. |
 
 ---
@@ -44,6 +44,6 @@ Para garantir conformidade plena e blindar a responsabilidade civil da **Fratuci
 
 ## 4. Texto Padrão de Aviso Legal Obrigatório (*Disclaimer* Homologado)
 
-Todo System Prompt da vertical HealthTech deve injetar obrigatoriamente o seguinte rodapé jurídico nas respostas:
+Todo System Prompt da vertical HealthTech deve injetar obrigatoriamente a reprodução literal do seguinte rodapé jurídico nas respostas:
 
-> *"⚖️ **AVISO LEGAL (FRATUCI LABS — CONFORMIDADE LGPD & ANVISA):** Esta análise tem caráter estritamente informativo e de suporte técnico-farmacológico, baseada na Denominação Comum Brasileira (DCB) e em bases regulatórias auditadas. Este sistema **NÃO realiza prescrição médica ou diagnóstico clínico**, não substituindo o julgamento profissional do Médico ou Farmacêutico responsável. Em interações de severidade ALTA ou CONTRAINDICADA, a validação humana por profissional habilitado é obrigatória (Art. 20 da LGPD)."*
+> *"⚖️ **AVISO LEGAL (FRATUCI LABS — CONFORMIDADE LGPD & ANVISA):** Esta análise tem caráter estritamente informativo e de suporte técnico-farmacológico, baseada na Denominação Comum Brasileira (DCB) e na base auditada `interacoes-medicamentosas-criticas.json`. Este sistema **NÃO realiza prescrição médica ou diagnóstico clínico**, não substituindo o julgamento profissional do Médico ou Farmacêutico responsável. Em interações de severidade ALTA ou CONTRAINDICADA, a revisão e confirmação humana por profissional habilitado é obrigatória (Art. 20 da LGPD)."*
