@@ -1,7 +1,7 @@
 ---
 document_id: "SOC-PROTO-001"
 title: "Protocolo Familiar e Acordo de Sócios da Fratuci Labs Ltda."
-version: "1.0.0"
+version: "1.1.0"
 effective_date: "2026-10-25"
 author: "André (Diretoria Jurídica & Governança)"
 signatories:
@@ -9,13 +9,13 @@ signatories:
   - "Antônio — Engenharia de IA & Agentes Autônomos"
   - "André — Diretoria Jurídica, Governança & LegalOps"
   - "Adriana — Estratégia de Negócios, Produto & Farmácia"
-status: "VIGENTE"
+status: "EM REVISÃO SOCIETÁRIA (PR)"
 ---
 
 # 📜 Protocolo Familiar e Acordo de Sócios — Fratuci Labs
 
 > [!IMPORTANT]
-> Este instrumento regula as relações societárias, financeiras, operacionais e familiares entre os 4 sócios-diretores da **Fratuci Labs**, prevenindo conflitos por meio de regras claras, objetivas e versionadas em Git.
+> Este instrumento regula as relações societárias, financeiras, operacionais, de propriedade intelectual e familiares entre os 4 sócios-diretores da **Fratuci Labs**, prevenindo conflitos por meio de regras claras, objetivas e versionadas em Git.
 
 ---
 
@@ -59,3 +59,20 @@ Cada sócio detém autonomia técnica dentro de sua diretoria, respeitando o dev
 ## CLÁUSULA 5ª — Das Regras de Entrada, Saída (*Vesting* & *Lock-up*) e Sucessão
 5.1. A cessão de quotas a terceiros estranhos à família é **bloqueada**, vigorando o Direito de Preferência absoluto dos demais sócios familiares.
 5.2. Em caso de retirada voluntária de qualquer sócio, a apuração de haveres será feita pelo valor patrimonial contábil ajustado, pago em até 24 (vinte e quatro) parcelas mensais, de modo a jamais descapitalizar o caixa operacional da **Fratuci Labs**.
+
+---
+
+## CLÁUSULA 6ª — Da Titularidade da Propriedade Intelectual (Códigos, Prompts, Bases Clínicas e Minutas)
+
+> [!IMPORTANT]
+> **Blindagem de Ativos Intangíveis da Fratuci Labs (Lei de Software nº 9.609/1998 e Lei de Direitos Autorais nº 9.610/1998)**
+
+6.1. **Cessão Integral e Originária à Pessoa Jurídica:** Todos os ativos intangíveis criados, curados ou comitados pelos 4 sócios nos repositórios da organização `fratuci-labs` pertencem **exclusiva e integralmente à pessoa jurídica Fratuci Labs Ltda.**, compondo seu patrimônio imaterial e segredo de negócio (*Trade Secret*), incluindo expressamente:
+1. **Ativos de Engenharia de Dados & Cloud (Anderson):** Módulos Terraform (`infra/main.tf`), schemas analíticos otimizados para ClickHouse 26.x (`clickhouse_healthtech_events.sql`), pipelines em Go/Rust e automações de FinOps;
+2. **Ativos de Inteligência Artificial & Agentes (Antônio):** Arquiteturas de agentes autônomos, conectores RAG, o middleware `gemini_webhook_ingest.go` e a engenharia estrutural de **System Prompts como Código** (`pharma-triage-system-prompt.md`);
+3. **Ativos Científicos, Clínicos e Estratégicos (Adriana):** Dicionários farmacológicos estruturados em DCB/DCI (`interacoes-medicamentosas-criticas.json`), Procedimentos Operacionais Padrão (`POP-001`), matrizes de severidade clínica e ADRs de modelo de negócios;
+4. **Ativos Jurídicos e de Governança (André):** Matrizes de conformidade LGPD/IA (`LGPD-RIPD-001`), políticas de licenciamento open-source, templates contratuais modulares e pareceres automatizados.
+
+6.2. **Prova de Autoria e Anterioridade via Git:** O histórico de commits assinado com hash criptográfico SHA-256 nos repositórios da `fratuci-labs` servirá como prova plena de anterioridade, cadeia de custódia e titularidade perante o INPI (Instituto Nacional da Propriedade Industrial) e terceiros contratantes.
+
+6.3. **Preservação do Conhecimento em Caso de Saída:** Na hipótese de desligamento ou retirada de qualquer sócio (Cláusula 5ª), a sociedade manterá licença perpétua, irrevogável e exclusiva sobre todos os códigos, prompts, bases JSON e documentos já integrados à branch `main` da `fratuci-labs`, garantindo a continuidade ininterrupta dos contratos B2B vigentes.
